@@ -39,6 +39,14 @@ projects.forEach((project) => {
   // Ensamblar tarjeta
   article.append(title, description, technologies);
 
+  //Enlace a proyecto Gestor de Tareas
+  if (project.title === "Gestor de Tareas") {
+    article.style.cursor = "pointer"; // cambiar cursor para indicar clicable
+    article.addEventListener("click", () => {
+      window.open("https://alfonsodezle-dev.github.io/gestor-de-tareas/", "_blank");
+    });
+  }
+
   // Insertar en el DOM
   projectsContainer.appendChild(article);
 });
@@ -50,4 +58,5 @@ const body = document.body;
 toggleButton.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
   toggleButton.textContent = body.classList.contains("dark-mode") ? "Modo Claro" : "Modo Oscuro";
+
 });
