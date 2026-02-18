@@ -47,6 +47,14 @@ projects.forEach((project) => {
     });
   }
 
+  //Enlace a proyecto App del Clima
+  if (project.title === "App del Clima") {
+    article.style.cursor = "pointer"; // cambiar cursor para indicar clicable
+    article.addEventListener("click", () => {
+      window.open("https://alfonsodezle-dev.github.io/app-clima/", "_blank");
+    });
+  }
+
   // Insertar en el DOM
   projectsContainer.appendChild(article);
 });
@@ -60,3 +68,4 @@ toggleButton.addEventListener("click", () => {
   toggleButton.textContent = body.classList.contains("dark-mode") ? "Modo Claro" : "Modo Oscuro";
 
 });
+
