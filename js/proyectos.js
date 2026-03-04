@@ -9,6 +9,11 @@ const projects = [
     technologies: ["Python", "MySQL", "python-dotenv"]
   },
   {
+    title: "Concesionario de coches",
+    description: "Aplicación web CRUD con autenticación",
+    technologies: ["PHP", "MySQL", "HTML5", "CSS3", "mysqli", "php-dotenv"]
+  },
+  {
     title: "App del Clima",
     description: "Consumo de API externa y renderizado dinámico.",
     technologies: ["JavaScript", "Fetch API"]
@@ -65,6 +70,13 @@ projects.forEach((project) => {
       window.open("https://github.com/alfonsodezle-dev/crud-tienda-python", "_blank");
     });
   }
+  //Enlace a proyecto CRUD concesionario
+  if (project.title === "Concesionario de coches") {
+    article.style.cursor = "pointer"; // cambiar cursor para indicar clicable
+    article.addEventListener("click", () => {
+      window.open("https://github.com/alfonsodezle-dev.github.io/concesionario-php/", "_blank");
+    });
+  }
   
   // Insertar en el DOM
   projectsContainer.appendChild(article);
@@ -78,5 +90,6 @@ toggleButton.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
   toggleButton.textContent = body.classList.contains("dark-mode") ? "Modo Claro" : "Modo Oscuro";
 });
+
 
 
