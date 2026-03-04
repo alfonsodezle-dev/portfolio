@@ -74,7 +74,7 @@ projects.forEach((project) => {
   if (project.title === "Concesionario de coches") {
     article.style.cursor = "pointer"; // cambiar cursor para indicar clicable
     article.addEventListener("click", () => {
-      window.open("https://github.com/alfonsodezle-dev.github.io/concesionario-php/", "_blank");
+      window.open("https://alfonsodezle-dev.github.io/concesionario-php/", "_blank");
     });
   }
   
@@ -90,6 +90,7 @@ toggleButton.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
   toggleButton.textContent = body.classList.contains("dark-mode") ? "Modo Claro" : "Modo Oscuro";
 });
+
 
 
 
