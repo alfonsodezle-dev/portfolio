@@ -4,14 +4,19 @@ const c = x => document.createElement(x);
 // Datos de los proyectos
 const projects = [
   {
-    title: "Gestor de Tareas",
-    description: "Aplicación CRUD con persistencia en localStorage.",
-    technologies: ["HTML", "CSS", "JavaScript"]
+    title: "Gestor de productos",
+    description: "CRUD con acceso a Base de Datos",
+    technologies: ["Python", "MySQL", "python-dotenv"]
   },
   {
     title: "App del Clima",
     description: "Consumo de API externa y renderizado dinámico.",
     technologies: ["JavaScript", "Fetch API"]
+  },
+  {
+    title: "Gestor de Tareas",
+    description: "Aplicación CRUD con persistencia en localStorage.",
+    technologies: ["HTML", "CSS", "JavaScript"]
   }
 ];
 
@@ -46,7 +51,6 @@ projects.forEach((project) => {
       window.open("https://alfonsodezle-dev.github.io/gestor-de-tareas/", "_blank");
     });
   }
-
   //Enlace a proyecto App del Clima
   if (project.title === "App del Clima") {
     article.style.cursor = "pointer"; // cambiar cursor para indicar clicable
@@ -54,7 +58,14 @@ projects.forEach((project) => {
       window.open("https://alfonsodezle-dev.github.io/app-clima/", "_blank");
     });
   }
-
+  //Enlace a proyecto CRUD tienda Python
+  if (project.title === "Gestor de productos") {
+    article.style.cursor = "pointer"; // cambiar cursor para indicar clicable
+    article.addEventListener("click", () => {
+      window.open("https://github.com/alfonsodezle-dev/crud-tienda-python", "_blank");
+    });
+  }
+  
   // Insertar en el DOM
   projectsContainer.appendChild(article);
 });
@@ -66,6 +77,6 @@ const body = document.body;
 toggleButton.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
   toggleButton.textContent = body.classList.contains("dark-mode") ? "Modo Claro" : "Modo Oscuro";
-
 });
+
 
