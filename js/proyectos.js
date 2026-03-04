@@ -4,6 +4,16 @@ const c = x => document.createElement(x);
 // Datos de los proyectos
 const projects = [
   {
+    title: "Gestor de Tareas",
+    description: "Aplicación CRUD con persistencia en localStorage.",
+    technologies: ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    title: "App del Clima",
+    description: "Consumo de API externa y renderizado dinámico.",
+    technologies: ["JavaScript", "Fetch API"]
+  },
+  {
     title: "Gestor de productos",
     description: "CRUD con acceso a Base de Datos",
     technologies: ["Python", "MySQL", "python-dotenv"]
@@ -12,16 +22,6 @@ const projects = [
     title: "Concesionario de coches",
     description: "Aplicación web CRUD con autenticación",
     technologies: ["PHP", "MySQL", "HTML5", "CSS3", "mysqli", "php-dotenv"]
-  },
-  {
-    title: "App del Clima",
-    description: "Consumo de API externa y renderizado dinámico.",
-    technologies: ["JavaScript", "Fetch API"]
-  },
-  {
-    title: "Gestor de Tareas",
-    description: "Aplicación CRUD con persistencia en localStorage.",
-    technologies: ["HTML", "CSS", "JavaScript"]
   }
 ];
 
@@ -90,6 +90,7 @@ toggleButton.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
   toggleButton.textContent = body.classList.contains("dark-mode") ? "Modo Claro" : "Modo Oscuro";
 });
+
 
 
 
