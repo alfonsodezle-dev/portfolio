@@ -22,6 +22,11 @@ const projects = [
     title: "Concesionario de coches",
     description: "Aplicación web CRUD con autenticación",
     technologies: ["PHP", "MySQL", "HTML5", "CSS3", "mysqli", "php-dotenv"]
+  },
+  {
+    title: "Paseando por Sevilla",
+    description: "Sitio web turístico en WordPress con reservas",
+    technologies: ["WordPress", "PHP", "Custom Post Types", "Hooks"]
   }
 ];
 
@@ -74,7 +79,14 @@ projects.forEach((project) => {
   if (project.title === "Concesionario de coches") {
     article.style.cursor = "pointer"; // cambiar cursor para indicar clicable
     article.addEventListener("click", () => {
-      window.open("https://github.com/alfonsodezle-dev/concesionario-php", "_blank");
+      window.open("https://github.com/alfonsodezle-dev.github.io/concesionario-php/", "_blank");
+    });
+  }
+  //Enlace a proyecto Paseando por Sevilla
+  if (project.title === "Paseando por Sevilla") {
+    article.style.cursor = "pointer"; // cambiar cursor para indicar clicable
+    article.addEventListener("click", () => {
+      window.open("https://github.com/alfonsodezle-dev/paseando-wordpress", "_blank");
     });
   }
   
@@ -90,6 +102,7 @@ toggleButton.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
   toggleButton.textContent = body.classList.contains("dark-mode") ? "Modo Claro" : "Modo Oscuro";
 });
+
 
 
 
